@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Sederhana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0056b3;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Website Saya</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Beranda</a>
+    <a href="#" onclick="showPage('about')">Tentang</a>
+    <a href="#" onclick="showPage('contact')">Kontak</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Halaman Utama</h2>
+      <p>Ini adalah halaman utama dari website sederhana ini.</p>
+    </section>
+
+    <section id="about" class="hidden">
+      <h2>Tentang Kami</h2>
+      <p>Website ini dibuat untuk contoh struktur dasar HTML.</p>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Kontak</h2>
+      <p>Email: contoh@email.com</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Website Sederhana
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('main section').forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
